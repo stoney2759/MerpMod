@@ -1,7 +1,7 @@
-Markdown | Less | Pretty
+Markdown | Less | 
 --- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+*Still* | `renders` |
+1 | 2 |
 
 # MerpMod
 
