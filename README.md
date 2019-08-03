@@ -28,7 +28,7 @@ Clone https://github.com/Merp/SubaruDefs
 
 Clone https://github.com/Merp/SharpTune or download SharpTune.exe. Copy SharpTune.exe to the MerpMod base directory and run it. Select the previously cloned SubaruDefs repository as the definition repo from Menu->Settings->Definition Repo Location. Close SharpTune.
 
-#Target ROM Selection
+## Target ROM Selection
 
 To select your target ROM, you must set the target rom placeholder (similar to an environment variable) for the ROM's CALID. TO do this, go to Setup->Customize->Placeholders
 
@@ -37,7 +37,7 @@ Placeholder     Directory
 TARGETROM       <YOUR ROM'S CALID>
 TESTROMDIR      $(PROJDIR)\TestRom
 
-#EcuMapTools
+## EcuMapTools
 
 SharpTune allows users to import .map files, and converts these to .h header files for use in HEW. This conversion is defined by idatohew.xml.
 
@@ -45,7 +45,7 @@ Map files are imported from /SubaruDisassembly/Maps where / is the folder contai
 
 Entries in the header are persistent (as long as they are defined in idatohew.xml) but are always overridden by entries in the map file! As such, Erroneous entries in the header file must be removed directly from the header file unless overridden by an entry in the map file.
 
-#Build Phases
+## Build Phases
 
 We need to create two phases, one to update and select the target headers before we compile the code (first build phase), and another to update and patch the rom with the code after it is compiled (last build phase)
 
@@ -69,7 +69,7 @@ Environment Variables (VARIABLE = VALUE):
 	TARGETROM=$(TARGETROM)
 	WORKSPDIR=$(WORKSPDIR)
 
-#Linker Sections and Script
+## Linker Sections and Script
 
 Linker sections are defined under Build->KPIT GNUSH [ELF] Toolchain..->Link/Library->Category:Sections
 
@@ -87,11 +87,11 @@ Sections should be organized as follows:
 Linker script is set up under Category:Other. Under User Defined options, enter the following:
 -e _ResetHandler -T "$(PROJDIR)\LinkerScript.txt"
 
-##Build Configurations
+## Build Configurations
 
 Build configuration is passed to SharpTune and back, which determines the config header file used (to select features/options) and determine the appropriate output directories/filenames. e.g. Build config "Flash_Testing" will use Flash.h to select the features by preprocessor options, and after building produces patch files named <CALID>.MerpMod.Flash.Testing.<version>.patch that are saved in the Flash_Testing folder. Also, only "*_Testing" or "*_Release" configs produce definition files, so using "*_Debug" allows you to debug the code in HEW without generating a million useless definitions. More details on these later.
 
-Configurations:
+### Configurations:
 
 Gratis (Deprecated, succeeded by Flash):
 Speed Density
@@ -107,7 +107,7 @@ CEL Flashing (2-stage FBKC, ECT, and more)
 Switch: (alpha/untested)
 Flash + Advanced Launch Control + 3x2 Map Switching/Blending
 
-#Definitions
+# Definitions
 
 Definitions are available from https://github.com/Merp/SubaruDefs and are divided into three categories. First decide which you need.
 
