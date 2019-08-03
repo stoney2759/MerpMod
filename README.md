@@ -1,7 +1,8 @@
 PlaceHolder | Directory |
 --- | --- 
 *TARGETROM* | `<YOUR ROM'S CALID>` |
-1 | 2 |
+*MMVERSION* | '00.60' |
+*TESTROMDIR* | '$(PROJDIR)\TestRom' |
 
 
 # MerpMod
