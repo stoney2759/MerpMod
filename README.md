@@ -1,10 +1,3 @@
-PlaceHolder | Directory |
---- | --- 
-*TARGETROM* | <YOUR ROM'S CALID> |
-*MMVERSION* | 00.60 |
-*TESTROMDIR* | $(PROJDIR)\TestRom |
-
-
 # MerpMod
 
 MerpMod is a patch designed for Subaru ecu roms. The goal of this project is to bring advanced features to the oem ecu.
@@ -40,11 +33,12 @@ Clone https://github.com/Merp/SharpTune or download SharpTune.exe. Copy SharpTun
 To select your target ROM, you must set the target rom placeholder (similar to an environment variable) for the ROM's CALID. TO do this, go to **Setup->Customize->Placeholders**
 
 **The following placeholders should be set by default.**
- Placeholder | Directory |
- --- | ---	
- TARGETROM	| <YOUR ROM'S CALID>	|
- MMVERSION	| 00.60			|
- TESTROMDIR	| $(PROJDIR)\TestRom	|	
+
+PlaceHolder | Directory |
+--- | --- 
+*TARGETROM* | <YOUR ROM'S CALID> |
+*MMVERSION* | 00.60 |
+*TESTROMDIR* | $(PROJDIR)\TestRom |	
 
 ## EcuMapTools
 
