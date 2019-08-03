@@ -32,10 +32,10 @@ Clone https://github.com/Merp/SharpTune or download SharpTune.exe. Copy SharpTun
 
 To select your target ROM, you must set the target rom placeholder (similar to an environment variable) for the ROM's CALID. TO do this, go to **Setup->Customize->Placeholders**
 
-The following placeholders should be set by default.
-Placeholder     Directory
-TARGETROM       <YOUR ROM'S CALID>
-TESTROMDIR      $(PROJDIR)\TestRom
+**The following placeholders should be set by default.**
+...Placeholder     Directory
+...TARGETROM       <YOUR ROM'S CALID>
+...TESTROMDIR      $(PROJDIR)\TestRom
 
 ## EcuMapTools
 
