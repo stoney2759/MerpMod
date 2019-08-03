@@ -30,7 +30,7 @@ Clone https://github.com/Merp/SharpTune or download SharpTune.exe. Copy SharpTun
 
 ## Target ROM Selection
 
-To select your target ROM, you must set the target rom placeholder (similar to an environment variable) for the ROM's CALID. TO do this, go to Setup->Customize->Placeholders
+To select your target ROM, you must set the target rom placeholder (similar to an environment variable) for the ROM's CALID. TO do this, go to **Setup->Customize->Placeholders**
 
 The following placeholders should be set by default.
 Placeholder     Directory
@@ -41,7 +41,7 @@ TESTROMDIR      $(PROJDIR)\TestRom
 
 SharpTune allows users to import .map files, and converts these to .h header files for use in HEW. This conversion is defined by idatohew.xml.
 
-Map files are imported from /SubaruDisassembly/Maps where / is the folder containing your cloned MerpMod repository.
+Map files are imported from **/SubaruDisassembly/Maps** where / is the folder containing your cloned MerpMod repository.
 
 Entries in the header are persistent (as long as they are defined in idatohew.xml) but are always overridden by entries in the map file! As such, Erroneous entries in the header file must be removed directly from the header file unless overridden by an entry in the map file.
 
